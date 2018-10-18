@@ -1,11 +1,17 @@
 <% @posts.each do |post| %>
-
-    <div class="post_wrapper">
-        <h2 class="title">
-            <%= link_to post.title, post %>
-        </h2>
-        <p class="data">
-            <%= time_ago_in_words(post.created_at) %>
-        </p>
-    </div>
+    
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="title">
+                        <%= link_to post.title, post %>
+                    </h2>
+                    <h3 class="data">
+                        <%= time_ago_in_words(post.created_at) %>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </section>
 <% end %>
